@@ -17,6 +17,16 @@ public class Trips {
 	private String bookingStatus;
 	private double price;
 
+	public Trips(long id, long userId, int tripId, String ackStatus, String bookingStatus, double price) {
+		super();
+		this.id = id;
+		this.userId = userId;
+		this.tripId = tripId;
+		this.ackStatus = ackStatus;
+		this.bookingStatus = bookingStatus;
+		this.price = price;
+	}
+
 	public Trips() {
 
 	}

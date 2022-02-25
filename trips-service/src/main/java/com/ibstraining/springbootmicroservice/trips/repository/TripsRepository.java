@@ -6,5 +6,8 @@ import com.ibstraining.springbootmicroservice.trips.entity.Trips;
 
 public interface TripsRepository extends JpaRepository<Trips, Long>  {
 
+	Trips findTripsById(Long id);
+
+
 
 }

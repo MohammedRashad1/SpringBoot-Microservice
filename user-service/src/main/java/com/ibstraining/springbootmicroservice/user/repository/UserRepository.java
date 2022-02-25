@@ -6,4 +6,5 @@ import com.ibstraining.springbootmicroservice.user.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 
+
 }

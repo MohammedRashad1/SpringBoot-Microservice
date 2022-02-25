@@ -1,6 +1,6 @@
 package com.ibstraining.springbootmicroservice.trips.controller;
 
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ibstraining.springbootmicroservice.trips.common.ResponseTemplateVO;
 import com.ibstraining.springbootmicroservice.trips.entity.Trips;
 import com.ibstraining.springbootmicroservice.trips.service.TripsService;
 
@@ -26,10 +27,11 @@ public class TripsController {
         return  tripsService.saveDepartment(trips);
     }
 	
-	@GetMapping("/{id}")
-	public Optional<Trips> getProductById(@PathVariable long id){
-		return tripsService.getTrips(id);
-	}
+	 @GetMapping("/{id}")
+	    public ResponseTemplateVO getTripsWithUser(@PathVariable("id") Long id) {
+	        return tripsService.getTripsWithUser(id);
+	    }
+
 	
 
 }
